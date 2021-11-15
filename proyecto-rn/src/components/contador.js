@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     padding: "10px",
   },
   boton1:{
-    backgroundColor: "#ccc",
+    backgroundColor: "#ccc", 
     padding: "4px", 
     // borderradius: "4px",
     // marginbottom: "10px",
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   },
   boton2:{
     backgroundColor: "rgba(0, 255, 0, 0.5)",
-    padding: "7px", 
+    padding: "50px", 
     // borderradius: "4px",
     margin: "10px",
     fontWeight:"bold",
