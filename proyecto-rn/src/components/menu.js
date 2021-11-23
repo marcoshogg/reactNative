@@ -16,7 +16,7 @@ class Menu extends Component{
   constructor(props){
     super(props);
     this.state= {
-      valor: 0,
+      valor: 00,
       errorLogin:' ',
       errorRegister:' ',
       loggedIn: false,
