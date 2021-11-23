@@ -1,6 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React, {Component} from 'react';
-import { Text, ReactFragment, TouchableOpacity, View, StyleSheet, Image, FlatList, ActivityIndicator, TextInput } from 'react-native';
+import { Text, TouchableOpacity, View, StyleSheet, Image, FlatList, ActivityIndicator, TextInput } from 'react-native';
 import {auth} from '../firebase/config'
 import { db } from '../firebase/config';
 import MyCamera from '../components/MyCamera'
