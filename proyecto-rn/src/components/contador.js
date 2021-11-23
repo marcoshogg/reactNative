@@ -68,7 +68,7 @@ class Contador extends Component{
         return(
 
           <View > 
-            <Text> Cantidad de clicks:{this.state.valor}</Text>
+            <Text> Cantidad dddde clicks:{this.state.valor}</Text>
             {/* <TouchableOpacity style={this.props.boton1} onPress= {()=> this.decrementar()}>
              <Text>Decrementar</Text> 
               </TouchableOpacity> */}
