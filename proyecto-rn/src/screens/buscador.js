@@ -119,5 +119,61 @@ desHacerBusqueda(){
   )}
 }
 
-
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
+    padding: "10px",
+  },
+  boton1:{
+    backgroundColor: "#ccc",
+    padding: "4px", 
+    fontWeight:"bold",
+  },
+  boton2:{
+    backgroundColor: "rgba(0, 255, 0, 0.5)",
+    padding: "7px", 
+    margin: "10px",
+    fontWeight:"bold",
+    
+    },
+    image:{
+      height:"300px",
+      width:"300px"
+  },
+  input:{
+    height:20,
+    paddingVertical:15,
+    paddingHorizontal: 10,
+    borderWidth:1,
+    borderColor: '#ccc',
+    borderStyle: 'solid',
+    borderRadius: 6,
+    marginVertical:10,
+},
+    button:{
+        backgroundColor:'#28a745',
+        paddingHorizontal: 10,
+        paddingVertical: 6,
+        textAlign: 'center',
+        borderRadius:4, 
+        borderWidth:1,
+        borderStyle: 'solid',
+        borderColor: '#28a745',
+        width: '30%',
+        justifyContent: 'center',
+    },
+    buttonDisabled:{
+        backgroundColor:'grey',
+        paddingHorizontal: 10,
+        paddingVertical: 6,
+        textAlign: 'center',
+        borderRadius:4, 
+        borderWidth:1,
+        borderStyle: 'solid',
+        borderColor: '#28a745',
+        width: '30%',
+        justifyContent: 'center',
+    }
+});
 export default Buscador; 
