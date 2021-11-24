@@ -99,6 +99,27 @@ updateImage(){
         <Text style={styles.userName}> {this.props.userData.displayName} </Text>
       <Ionicons  onPress={()=> this.openOptions()}  name='ellipsis-vertical' size='25px' />
       </View>
+      <TouchableOpacity onLongPress={()=> this.editPicture()}>
+      <Text >Editar Imagen</Text>
+      </TouchableOpacity>
+      {this.state.editPicture ? 
+      
+      <Modal style={styles.modal} visible={this.state.openOptions}
+                    animationType="fade"
+                    transparent={false}>
+      
+       <MyCamera  onImageUpload = {(url) => this.onImageUpload(url)}/>
+      
+  
+       <Text onPress={()=> this.updateImage()}> aa</Text>
+ 
+      
+       
+       
+             
+        </Modal>
+            :
+            null}
       
 
       {this.state.openOptions ? 

@@ -11,7 +11,7 @@ class Post extends Component {
     super(props),
     this.state={
       likes: this.props.likes.length,
-      liked: this.props.likes.includes(auth.currentUser.email),
+      liked: this.props.likes.includes(auth.currentUser.displayName),
       comentarios: this.props.comentarios,
       comentario:'',
       showModal: false,
@@ -128,12 +128,17 @@ eliminar(){
       <View style={styles.post}> 
       <View style={styles.headerPost}>
         <View style={styles.headerUser}>
-          {/* <Ionicons style={styles.avatar} name='person-circle-outline' size='28px' /> */}
-          <Image style={styles.imageAvatar}
+        {this.props.item.data.userPhoto ?
+         <Image style={styles.imageAvatar}
           
           source={{uri:this.props.item.data.userPhoto
           }}
           resizeMode={'contain'}/>
+          :
+          <Ionicons style={styles.avatar} name='person-circle-outline' size='28px' /> 
+         
+          
+          }
           <Text style={styles.usuario}>{this.props.ownerName}</Text> 
         </View>
       
