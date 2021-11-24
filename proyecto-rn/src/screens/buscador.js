@@ -14,7 +14,7 @@ class Buscador extends Component {
       postsManipulables: [],
       textoBuscado: '',
       usuarioBuscado:'',
-      usuarioBuscado1:'',
+      resultado:'',
       disabled: true,
       busqueda: false
     } }
@@ -34,7 +34,7 @@ db.collection('Posts').where('ownerName', '==', this.state.textoBuscado).onSnaps
       this.setState({
         posts: posteos,
         textoBuscado: '',
-        usuarioBuscado: this.state.textoBuscado,
+        usuarioBuscado: this.state.resultado,
         busqueda: true,
 
         
@@ -71,6 +71,7 @@ desHacerBusqueda(){
      onChangeText={  
        text => this.setState({
          textoBuscado:text,
+         resultado: text
       
        
         },
