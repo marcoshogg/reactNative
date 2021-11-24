@@ -69,7 +69,8 @@ class miPerfil extends Component {
     const user = firebase.auth().currentUser;
     this.setState({
       showCamera: false,
-      url : url
+      url : url,
+      editPicture: false
     }),
   
   user.updateProfile({
@@ -99,11 +100,13 @@ updateImage(){
         <Text style={styles.userName}> {this.props.userData.displayName} </Text>
       <Ionicons  onPress={()=> this.openOptions()}  name='ellipsis-vertical' size='25px' />
       </View>
-      <TouchableOpacity onLongPress={()=> this.editPicture()}>
+      <TouchableOpacity onPress={()=> this.editPicture()}>
       <Text >Editar Imagen</Text>
       </TouchableOpacity>
-      {this.state.editPicture ? 
       
+      {this.state.editPicture ? 
+      <View style={styles.contenedorCamara}>
+        <Text onPress={()=>this.editPicture()}>X</Text>
       <Modal style={styles.modal} visible={this.state.openOptions}
                     animationType="fade"
                     transparent={false}>
@@ -111,16 +114,17 @@ updateImage(){
        <MyCamera  onImageUpload = {(url) => this.onImageUpload(url)}/>
       
   
-       <Text onPress={()=> this.updateImage()}> aa</Text>
+       {/* <Text onPress={()=> this.updateImage()}> aa</Text> */}
  
       
        
        
              
-        </Modal>
+        </Modal> 
+        </View>
             :
             null}
-      
+     
 
       {this.state.openOptions ? 
       
@@ -169,7 +173,7 @@ updateImage(){
  
   const styles = StyleSheet.create({
     formContainer:{
-      flex: '1',
+      flex: 1,
         paddingHorizontal:10,
         marginTop: 20,
     },
@@ -205,13 +209,19 @@ updateImage(){
       fontWeight: 'bold'
     },
     modal:{
-      flex: 1,
       width: '90%',
+      height: '80%',
       marginRight : '0px'
     },
     camera:{
       justifyContent:'center',
-      margin:'auto'
+      margin:'auto',
+      height: '100%',
+      borderRadius: '50%'
+
+    },
+    contenedorCamara:{
+      height: '40%'
     }
   })
 
