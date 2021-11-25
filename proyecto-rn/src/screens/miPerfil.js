@@ -23,7 +23,7 @@ class miPerfil extends Component {
  
     componentDidMount(){
       // traer datos de la db
-      db.collection('Posts').where('ownerEmail', '==', this.props.userData.email).onSnapshot(
+      db.collection('Posts').where('ownerEmail', '==', this.props.userData.email).orderBy('createdAt', 'desc').onSnapshot(
         docs => {
           let posteos = [];
           docs.forEach( doc => {

@@ -130,7 +130,7 @@ class MyCamera extends Component {
             <Text>no hay permiso para usar la camara</Text>
           
             :
-            <ActivityIndicator size="large"/>
+            <ActivityIndicator style={{margin:'auto'}} size="large"/>
            } 
           
         </React.Fragment>
