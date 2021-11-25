@@ -99,15 +99,15 @@ class MyCamera extends Component {
                source = {{uri : this.state.photo}} 
                />
                <View style={styles.actionArea} >
-               <TouchableOpacity onPress={()=>this.savePhoto()}>
+               <TouchableOpacity style={styles.botonAceptar} onPress={()=>this.savePhoto()}>
           
-            <Text>Aceptar</Text>
+            <Text style={styles.texto}>Aceptar</Text>
            
           
                  
                </TouchableOpacity>
-               <TouchableOpacity onPress={()=> this.rechazar()} >
-                 <Text>Rechazar</Text>
+               <TouchableOpacity style={styles.botonRechazar} onPress={()=> this.rechazar()} >
+                 <Text style={styles.texto}>Rechazar</Text>
                </TouchableOpacity>
                
                </View>
@@ -157,11 +157,32 @@ class MyCamera extends Component {
       flex: 7
     },
     actionArea:{
-      flex:2
+      flex:1,
+      flexDirection:'row',
+      justifyContent: 'space-around'
     },
     camera:{
       justifyContent:'center',
       margin:'auto'
+    },
+    botonAceptar:{
+        backgroundColor:'#28a745',
+        margin: 'auto',
+        textAlign: 'center',
+        borderRadius:4, 
+        width: '30%',
+        height: '70%'
+    },
+    botonRechazar:{
+      backgroundColor:'red',
+      margin: 'auto',
+      textAlign: 'center',
+      borderRadius:4, 
+      width: '30%',
+      height: '70%'
+  },
+    texto:{
+      margin: 'auto'
     }
   })
   export default MyCamera
